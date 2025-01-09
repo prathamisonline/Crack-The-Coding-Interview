@@ -59,7 +59,9 @@ If we had started at the first tree, we would only pick from trees `[1, 2]`.
 
 - `1 <= fruits.length <= 10^5`
 - `0 <= fruits[i] < fruits.length`
-```class Solution {
+```c++
+
+class Solution {
 public:
     int totalFruit(vector<int>& fruits) {
         unordered_map<int, int> mpp;
@@ -84,4 +86,5 @@ public:
         }
         return maxLen == INT_MIN ? 0 : maxLen;
     }
-};```
+}
+```
