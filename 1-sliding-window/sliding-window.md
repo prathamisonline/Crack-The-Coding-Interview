@@ -1,0 +1,1 @@
+Most of the problem based on sub Array and substring
