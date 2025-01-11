@@ -1,64 +1,32 @@
 # 904. Fruit Into Baskets
 
 ## Problem Description
-You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array `fruits` where `fruits[i]` is the type of fruit the `i-th` tree produces.
+You are visiting a farm with a row of fruit trees, represented by an array `fruits` where `fruits[i]` is the type of fruit on the `i-th` tree. You have **two baskets**, each holding one type of fruit (unlimited quantity). Starting from any tree, pick one fruit from every tree moving right until encountering a fruit that doesn’t fit in your baskets.
 
-You want to collect as much fruit as possible. However, the owner has some strict rules that you must follow:
-
-1. You only have two baskets, and each basket can only hold a single type of fruit. There is no limit on the amount of fruit each basket can hold.
-2. Starting from any tree of your choice, you must pick exactly one fruit from every tree (including the starting tree) while moving to the right. The picked fruits must fit in one of your baskets.
-3. Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
-
-Given the integer array `fruits`, return the **maximum number of fruits** you can pick.
+Return the **maximum number of fruits** you can pick.
 
 ---
 
 ## Examples
 
-### Example 1:
-**Input:**  
-`fruits = [1, 2, 1]`  
+- **Input:** `fruits = [1, 2, 1]`  
+  **Output:** `3`  
+  **Explanation:** Pick all 3 trees.
 
-**Output:**  
-`3`  
+- **Input:** `fruits = [0, 1, 2, 2]`  
+  **Output:** `3`  
+  **Explanation:** Pick trees `[1, 2, 2]`.
 
-**Explanation:**  
-We can pick from all 3 trees.
-
----
-
-### Example 2:
-**Input:**  
-`fruits = [0, 1, 2, 2]`  
-
-**Output:**  
-`3`  
-
-**Explanation:**  
-We can pick from trees `[1, 2, 2]`.  
-If we had started at the first tree, we would only pick from trees `[0, 1]`.
+- **Input:** `fruits = [1, 2, 3, 2, 2]`  
+  **Output:** `4`  
+  **Explanation:** Pick trees `[2, 3, 2, 2]`.
 
 ---
 
-### Example 3:
-**Input:**  
-`fruits = [1, 2, 3, 2, 2]`  
-
-**Output:**  
-`4`  
-
-**Explanation:**  
-We can pick from trees `[2, 3, 2, 2]`.  
-If we had started at the first tree, we would only pick from trees `[1, 2]`.
-
----
-
-## Constraints:
-
-
-
+## Constraints
 - `1 <= fruits.length <= 10^5`
 - `0 <= fruits[i] < fruits.length`
+
 ```c++
 
 class Solution {
